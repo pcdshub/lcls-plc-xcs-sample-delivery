@@ -59,10 +59,15 @@ M3SelectorC : FB_SelectorM3;
 M3SelectorD : FB_SelectorM3;
 
 {attribute 'pytmc' := 'pv: XCS:SDS:PCM:A'}
-{attribute 'TcLinkTo' := '.stPropAir1.i_iPressRB 		:= TIIB[RCC_PCM_A (EP4374-0002)]^AI Inputs Channel 1^Value;
-                          .stPropAir2.i_iPressRB 		:= TIIB[RCC_PCM_A (EP4374-0002)]^AI Inputs Channel 2^Value;
-                          .stPropAir1.q_iPressCt 		:= TIIB[RCC_PCM_A (EP4374-0002)]^AO Outputs Channel 3^Analog output;
-                          .stPropAir2.q_iPressCt 		:= TIIB[RCC_PCM_A (EP4374-0002)]^AO Outputs Channel 4^Analog output;
+{attribute 'TcLinkTo' := '.stPropAir1.i_iPressRB 	:= TIIB[PCM A (EP4374-0002)]^AI Inputs Channel 1^Value;
+                          .stPropAir2.i_iPressRB 	:= TIIB[PCM A (EP4374-0002)]^AI Inputs Channel 2^Value;
+                          .stPropAir1.q_iPressCt 	:= TIIB[PCM A (EP4374-0002)]^AO Outputs Channel 3^Analog output;
+                          .stPropAir2.q_iPressCt 	:= TIIB[PCM A (EP4374-0002)]^AO Outputs Channel 4^Analog output;
+                          .stSerial1.stComIn.Status := TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Status;
+                          .stSerial2.stComIn.Status := TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Status;
+                          .stSerial1.stComOut.Ctrl 	:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Ctrl;
+                          .stSerial2.stComOut.Ctrl 	:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Ctrl;
+                          .stBaseIO.i_SyncUnitWC 	:= TIIB[PCM A (EP1111)]^WcState^WcState;
 '}
 PCMA : FB_PressureControlModule;
 
