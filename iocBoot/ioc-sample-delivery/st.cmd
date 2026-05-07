@@ -3,9 +3,9 @@
 #
 #         Project: sample-delviery.tsproj
 #        PLC name: sample-delivery (sample-delivery Instance)
-# Generated using: pytmc 2.18.2
-# Project version: c1b1313
-#    Project hash: c1b1313a6fa407b6c356086f5e85bc39b30e0183
+# Generated using: pytmc 2.19.1
+# Project version: d08781b
+#    Project hash: d08781b2411092a142f397d5679b7880c5190894
 #     PLC IP/host: plc-xcs-sds (Specified in Makefile; project has: 172.21.38.25)
 #      PLC Net ID: 172.21.38.25.1.1
 #  ** Production mode IOC **
@@ -40,7 +40,7 @@ epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
 epicsEnvSet("IPADDR",           "plc-xcs-sds")
 epicsEnvSet("AMSID",            "172.21.38.25.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "1783")
+epicsEnvSet("ADS_MAX_PARAMS",   "1802")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
@@ -86,7 +86,7 @@ dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:sample-delive
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:sample-delivery,IDX=2,TASK_PORT=350")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:sample-delivery")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:sample-delivery,PROJECT=sample-delviery.tsproj,HASH=c1b1313,VERSION=c1b1313,PYTMC=2.18.2,PLC_HOST=plc-xcs-sds")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:sample-delivery,PROJECT=sample-delviery.tsproj,HASH=d08781b,VERSION=d08781b,PYTMC=2.19.1,PLC_HOST=plc-xcs-sds")
 
 #   LCLS Sample Delivery: * -> 2.0.0 (SLAC - LCLS)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:sample-delivery,DEPENDENCY=LCLS_Sample_Delivery,VERSION=2.0.0,VENDOR=SLAC - LCLS")
@@ -104,8 +104,8 @@ cd "$(IOC_TOP)"
 ## PLC Project Database files ##
 dbLoadRecords("sample-delivery.db", "PORT=$(ASYN_PORT),PREFIX=PLC:sample-delivery:,IOCNAME=$(IOC),IOC=$(IOC)")
 
-# Total records: 783
-callbackSetQueueSize(3566)
+# Total records: 802
+callbackSetQueueSize(3604)
 
 # Autosave and archive settings:
 save_restoreSet_status_prefix("PLC:sample-delivery:")
