@@ -53,7 +53,7 @@
 		</DataType>
 	</DataTypes>
 	<Project GUID="{E8E24F0C-C1D4-4F03-A71D-733C6242F5C4}" Name="sample-delivery" PrjFilePath="..\..\sample-delivery\sample-delivery.plcproj" TmcFilePath="..\..\sample-delivery\sample-delivery.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="sample-delivery\sample-delivery.tmc" TmcHash="{2EA10DEB-09DA-882A-7716-143CA6884F49}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="sample-delivery\sample-delivery.tmc" TmcHash="{D403DE5F-9B3C-6262-19C5-D49B3006BE18}">
 			<Name>sample-delivery Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -192,6 +192,46 @@
 			</Vars>
 			<Vars VarGrpType="1" ContextId="1" AreaNo="16">
 				<Name>PlcTask Inputs</Name>
+				<Var>
+					<Name>GVL_RCC.RCC_VRC_01.i_xOpnLS</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_RCC.RCC_VRC_02.i_xOpnLS</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_RCC.RCC_VRC_03.i_xOpnLS</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_RCC.RCC_VRC_04.i_xOpnLS</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_RCC.RCC_VRC_05.i_xOpnLS</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_RCC.RCC_VRC_06.i_xOpnLS</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_RCC.RCC_VRC_07.i_xOpnLS</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_RCC.RCC_VRC_08.i_xOpnLS</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
 				<Var>
 					<Name>GVL_SDS.M3SelectorA.stBaseIO.i_SyncUnitWC</Name>
 					<Comment><![CDATA[ This structure should be used as a basis for M3 arch. IO clusters.
@@ -364,49 +404,41 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive]]><
 					<Comment><![CDATA[ if True, do not set valves according to i_xEpics]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_01.i_xOpnLS</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_02.i_xOpnLS</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_03.i_xOpnLS</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_04.i_xOpnLS</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_05.i_xOpnLS</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_06.i_xOpnLS</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_07.i_xOpnLS</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_08.i_xOpnLS</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
 			</Vars>
 			<Vars VarGrpType="2" ContextId="1" AreaNo="17">
 				<Name>PlcTask Outputs</Name>
+				<Var>
+					<Name>GVL_RCC.RCC_VRC_01.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_RCC.RCC_VRC_02.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_RCC.RCC_VRC_03.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_RCC.RCC_VRC_04.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_RCC.RCC_VRC_05.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_RCC.RCC_VRC_06.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_RCC.RCC_VRC_07.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_RCC.RCC_VRC_08.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
 				<Var>
 					<Name>GVL_SDS.M3SelectorA.stShaker01.q_xPwrDO</Name>
 					<Type>BOOL</Type>
@@ -562,38 +594,6 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive]]><
 					<Name>GVL_SDS.SolenoidPairA.q_xDO2</Name>
 					<Type>BOOL</Type>
 				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_01.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_02.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_03.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_04.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_05.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_06.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_07.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_08.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
 			</Vars>
 			<Vars VarGrpType="8" ContextId="1" AreaNo="20">
 				<Name>PlcTask Retains</Name>
@@ -705,109 +705,6 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive]]><
 				<Link VarA="SerialComm Inputs^GVL_SDS.M3SelectorD.stSensSerial.stComIn^Status" VarB="COM TxPDO-Map Inputs Channel 1^Status" AutoLink="true"/>
 				<Link VarA="SerialComm Inputs^GVL_SDS.M3SelectorD.stViciSerial.stComIn^Status" VarB="COM TxPDO-Map Inputs Channel 2^Status" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^PCM A (EP1111)">
-				<Link VarA="PlcTask Inputs^GVL_SDS.PCMA.stBaseIO.i_SyncUnitWC" VarB="WcState^WcState" AutoLink="true" Size="1"/>
-			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^PCM A (EP4374-0002)">
-				<Link VarA="PlcTask Inputs^GVL_SDS.PCMA.stPropAir1.i_iPressRB" VarB="AI Inputs Channel 1^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_SDS.PCMA.stPropAir2.i_iPressRB" VarB="AI Inputs Channel 2^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_SDS.PCMA.stPropAir1.q_iPressCt" VarB="AO Outputs Channel 3^Analog output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_SDS.PCMA.stPropAir2.q_iPressCt" VarB="AO Outputs Channel 4^Analog output" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^PCM A (EP6002-0002)">
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[0]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 0" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[10]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 10" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[11]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 11" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[12]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 12" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[13]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 13" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[14]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 14" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[15]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 15" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[16]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 16" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[17]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 17" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[18]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 18" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[19]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 19" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[1]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 1" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[20]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 20" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[21]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 21" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[2]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 2" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[3]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 3" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[4]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 4" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[5]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 5" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[6]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 6" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[7]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 7" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[8]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 8" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^D[9]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 9" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial1.stComIn^Status" VarB="COM TxPDO-Map Inputs Channel 1^Status" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[0]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 0" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[10]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 10" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[11]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 11" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[12]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 12" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[13]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 13" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[14]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 14" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[15]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 15" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[16]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 16" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[17]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 17" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[18]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 18" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[19]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 19" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[1]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 1" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[20]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 20" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[21]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 21" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[2]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 2" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[3]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 3" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[4]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 4" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[5]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 5" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[6]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 6" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[7]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 7" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[8]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 8" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^D[9]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 9" AutoLink="true"/>
-				<Link VarA="SerialComm Inputs^GVL_SDS.PCMA.stSerial2.stComIn^Status" VarB="COM TxPDO-Map Inputs Channel 2^Status" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^Ctrl" VarB="COM RxPDO-Map Outputs Channel 1^Ctrl" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[0]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 0" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[10]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 10" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[11]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 11" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[12]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 12" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[13]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 13" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[14]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 14" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[15]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 15" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[16]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 16" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[17]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 17" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[18]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 18" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[19]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 19" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[1]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 1" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[20]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 20" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[21]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 21" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[2]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 2" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[3]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 3" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[4]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 4" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[5]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 5" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[6]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 6" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[7]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 7" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[8]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 8" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial1.stComOut^D[9]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 9" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^Ctrl" VarB="COM RxPDO-Map Outputs Channel 2^Ctrl" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[0]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 0" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[10]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 10" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[11]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 11" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[12]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 12" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[13]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 13" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[14]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 14" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[15]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 15" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[16]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 16" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[17]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 17" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[18]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 18" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[19]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 19" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[1]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 1" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[20]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 20" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[21]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 21" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[2]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 2" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[3]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 3" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[4]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 4" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[5]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 5" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[6]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 6" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[7]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 7" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[8]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 8" AutoLink="true"/>
-				<Link VarA="SerialComm Outputs^GVL_SDS.PCMA.stSerial2.stComOut^D[9]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 9" AutoLink="true"/>
-			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^PCM B (EP1111)">
 				<Link VarA="PlcTask Inputs^GVL_SDS.PCMB.stBaseIO.i_SyncUnitWC" VarB="WcState^WcState" AutoLink="true" Size="1"/>
 			</OwnerB>
@@ -870,6 +767,12 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive]]><
 				<Link VarA="PlcTask Outputs^GVL_RCC.RCC_VRC_06.q_xOPN_DO" VarB="Channel 14^Output" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Outputs^GVL_RCC.RCC_VRC_07.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Outputs^GVL_RCC.RCC_VRC_08.q_xOPN_DO" VarB="Channel 16^Output" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^RCC_PCM_A (EP4374-0002)">
+				<Link VarA="PlcTask Inputs^GVL_SDS.PCMA.stPropAir1.i_iPressRB" VarB="AI Inputs Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_SDS.PCMA.stPropAir2.i_iPressRB" VarB="AI Inputs Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_SDS.PCMA.stPropAir1.q_iPressCt" VarB="AO Outputs Channel 3^Analog output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_SDS.PCMA.stPropAir2.q_iPressCt" VarB="AO Outputs Channel 4^Analog output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Solenoid Pair A Digital IO (EP2338-0001)">
 				<Link VarA="PlcTask Outputs^GVL_SDS.SolenoidPairA.q_xDO1" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
