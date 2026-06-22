@@ -3,9 +3,9 @@
 #
 #         Project: sample-delviery.tsproj
 #        PLC name: sample-delivery (sample-delivery Instance)
-# Generated using: pytmc 2.20.0
-# Project version: 475cb21
-#    Project hash: 475cb2182e6fa909d6e1ebd740a71404cc947d12
+# Generated using: pytmc 2.19.1
+# Project version: 7a3c74b
+#    Project hash: 7a3c74b21ad487a3109badf5f6e5f17d04bd3739
 #     PLC IP/host: plc-xcs-sds (Specified in Makefile; project has: 172.21.38.25)
 #      PLC Net ID: 172.21.38.25.1.1
 #  ** Production mode IOC **
@@ -115,7 +115,7 @@ dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:sample-delive
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:sample-delivery,IDX=2,TASK_PORT=350")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:sample-delivery")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:sample-delivery,PROJECT=sample-delviery.tsproj,HASH=475cb21,VERSION=475cb21,PYTMC=2.20.0,PLC_HOST=plc-xcs-sds")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:sample-delivery,PROJECT=sample-delviery.tsproj,HASH=7a3c74b,VERSION=7a3c74b,PYTMC=2.19.1,PLC_HOST=plc-xcs-sds")
 
 #   LCLS Sample Delivery: * -> 2.0.0 (SLAC - LCLS)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:sample-delivery,DEPENDENCY=LCLS_Sample_Delivery,VERSION=2.0.0,VENDOR=SLAC - LCLS")
