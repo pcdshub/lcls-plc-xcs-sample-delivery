@@ -2,7 +2,7 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <GVL Name="GVL_SDS" Id="{233c10f9-ad08-42e0-b3b0-42b6b4ca796a}">
     <Declaration><![CDATA[VAR_GLOBAL
-	
+
 // TODO: FIX Linking for Devices will be deployed
 //  Working: Bronkhorst MFM B
 {attribute 'pytmc' := 'pv: XCS:SDS:SEL:A'}
@@ -15,7 +15,7 @@
                           .stShaker03.q_xPwrDO := TIIB[M3 Selector A Digital IO (EP2338-1001)]^Channel 11^Output;
                           .stShaker04.q_xPwrDO := TIIB[M3 Selector A Digital IO (EP2338-1001)]^Channel 12^Output;
                           .stBaseIO.i_SyncUnitWC := TIID^MAIN (EtherCAT)^M3 Selector A (EP1111)^WcState^WcState;
-						  .
+                          .
 '}
 M3SelectorA : FB_SelectorM3;
 
@@ -94,7 +94,7 @@ PCMB : FB_PressureControlModule;
                           .stSerial1.stComOut.Ctrl 	:= TIIB[PCM C (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Ctrl;
                           .stSerial2.stComOut.Ctrl 	:= TIIB[PCM C (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Ctrl;
                           .stBaseIO.i_SyncUnitWC 	:= TIIB[PCM C (EP1111)]^WcState^WcState;
-						  '}
+                          '}
 PCMC : FB_PressureControlModule;
 
 {attribute 'pytmc' := 'pv: XCS:SDS:PCM:D'}
@@ -107,7 +107,7 @@ PCMC : FB_PressureControlModule;
                           .stSerial1.stComOut.Ctrl 	:= TIIB[PCM D (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Ctrl;
                           .stSerial2.stComOut.Ctrl 	:= TIIB[PCM D (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Ctrl;
                           .stBaseIO.i_SyncUnitWC 	:= TIIB[PCM D (EP1111)]^WcState^WcState;
-						  '}
+                          '}
 PCMD : FB_PressureControlModule;
 
 {attribute 'pytmc' := 'pv: XCS:SDS:MAN'}
@@ -130,7 +130,7 @@ PCMD : FB_PressureControlModule;
 GasMan : FB_GasManifold;
 
 {attribute 'pytmc' := 'pv: XCS:SDS:MFM:A'}
-{attribute 'TcLinkTo' := '.stMFM.i_rFlow := 	TIIB[Bronkhorst MFM A]^TxPDO Map^fMeasure; 
+{attribute 'TcLinkTo' := '.stMFM.i_rFlow := 	TIIB[Bronkhorst MFM A]^TxPDO Map^fMeasure;
                           .stMFM.q_rSetpoint := TIIB[Bronkhorst MFM A]^RxPDO Map^fSetpoint;
 '}
 BronkhorstA : FB_BronkhorstMFM;
