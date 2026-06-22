@@ -53,7 +53,7 @@
 		</DataType>
 	</DataTypes>
 	<Project GUID="{E8E24F0C-C1D4-4F03-A71D-733C6242F5C4}" Name="sample-delivery" PrjFilePath="..\..\sample-delivery\sample-delivery.plcproj" TmcFilePath="..\..\sample-delivery\sample-delivery.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="sample-delivery\sample-delivery.tmc" TmcHash="{07393FA7-602B-17D9-1DBA-3197AC65028A}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="sample-delivery\sample-delivery.tmc" TmcHash="{645028BC-B3C9-584E-DB6C-5573EB445A10}">
 			<Name>sample-delivery Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -192,6 +192,29 @@
 			</Vars>
 			<Vars VarGrpType="1" ContextId="1" AreaNo="16">
 				<Name>PlcTask Inputs</Name>
+				<Var>
+					<Name>PRG_RCC.RCC_PCM.stBaseIO.i_SyncUnitWC</Name>
+					<Comment><![CDATA[ This structure should be used as a basis for M3 arch. IO clusters.
+    Will stash stuff like ethercat diagnostics and other general purpose stuff 
+WC bit tells you if the sync unit is OK, which tells you if cluster is alive]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_RCC.RCC_PCM.stSerial1.stComIn</Name>
+					<Type GUID="{D95A7EB5-765A-0AFA-5FF9-4D3776E1C9EE}" Namespace="LCLS_Sample_Delivery.Tc2_SerialCom">EL6inData22B</Type>
+				</Var>
+				<Var>
+					<Name>PRG_RCC.RCC_PCM.stSerial2.stComIn</Name>
+					<Type GUID="{D95A7EB5-765A-0AFA-5FF9-4D3776E1C9EE}" Namespace="LCLS_Sample_Delivery.Tc2_SerialCom">EL6inData22B</Type>
+				</Var>
+				<Var DisplayScale="#x2">
+					<Name>PRG_RCC.RCC_PCM.stPropAir1.i_iPressRB</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var DisplayScale="#x2">
+					<Name>PRG_RCC.RCC_PCM.stPropAir2.i_iPressRB</Name>
+					<Type>INT</Type>
+				</Var>
 				<Var>
 					<Name>GVL_RCC.RCC_VRC_01.i_xOpnLS</Name>
 					<Comment><![CDATA[IO]]></Comment>
@@ -404,32 +427,25 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive]]><
 					<Comment><![CDATA[ if True, do not set valves according to i_xEpics]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
-				<Var>
-					<Name>PRG_RCC.RCC_PCM.stBaseIO.i_SyncUnitWC</Name>
-					<Comment><![CDATA[ This structure should be used as a basis for M3 arch. IO clusters.
-    Will stash stuff like ethercat diagnostics and other general purpose stuff 
-WC bit tells you if the sync unit is OK, which tells you if cluster is alive]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_RCC.RCC_PCM.stSerial1.stComIn</Name>
-					<Type GUID="{D95A7EB5-765A-0AFA-5FF9-4D3776E1C9EE}" Namespace="LCLS_Sample_Delivery.Tc2_SerialCom">EL6inData22B</Type>
-				</Var>
-				<Var>
-					<Name>PRG_RCC.RCC_PCM.stSerial2.stComIn</Name>
-					<Type GUID="{D95A7EB5-765A-0AFA-5FF9-4D3776E1C9EE}" Namespace="LCLS_Sample_Delivery.Tc2_SerialCom">EL6inData22B</Type>
-				</Var>
-				<Var DisplayScale="#x2">
-					<Name>PRG_RCC.RCC_PCM.stPropAir1.i_iPressRB</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var DisplayScale="#x2">
-					<Name>PRG_RCC.RCC_PCM.stPropAir2.i_iPressRB</Name>
-					<Type>INT</Type>
-				</Var>
 			</Vars>
 			<Vars VarGrpType="2" ContextId="1" AreaNo="17">
 				<Name>PlcTask Outputs</Name>
+				<Var>
+					<Name>PRG_RCC.RCC_PCM.stSerial1.stComOut</Name>
+					<Type GUID="{22AE08A2-CB4D-A50B-13F2-CEED32D84990}" Namespace="LCLS_Sample_Delivery.Tc2_SerialCom">EL6outData22B</Type>
+				</Var>
+				<Var>
+					<Name>PRG_RCC.RCC_PCM.stSerial2.stComOut</Name>
+					<Type GUID="{22AE08A2-CB4D-A50B-13F2-CEED32D84990}" Namespace="LCLS_Sample_Delivery.Tc2_SerialCom">EL6outData22B</Type>
+				</Var>
+				<Var DisplayScale="#x2">
+					<Name>PRG_RCC.RCC_PCM.stPropAir1.q_iPressCt</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var DisplayScale="#x2">
+					<Name>PRG_RCC.RCC_PCM.stPropAir2.q_iPressCt</Name>
+					<Type>INT</Type>
+				</Var>
 				<Var>
 					<Name>GVL_RCC.RCC_VRC_01.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
@@ -616,22 +632,6 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive]]><
 				<Var>
 					<Name>GVL_SDS.SolenoidPairA.q_xDO2</Name>
 					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_RCC.RCC_PCM.stSerial1.stComOut</Name>
-					<Type GUID="{22AE08A2-CB4D-A50B-13F2-CEED32D84990}" Namespace="LCLS_Sample_Delivery.Tc2_SerialCom">EL6outData22B</Type>
-				</Var>
-				<Var>
-					<Name>PRG_RCC.RCC_PCM.stSerial2.stComOut</Name>
-					<Type GUID="{22AE08A2-CB4D-A50B-13F2-CEED32D84990}" Namespace="LCLS_Sample_Delivery.Tc2_SerialCom">EL6outData22B</Type>
-				</Var>
-				<Var DisplayScale="#x2">
-					<Name>PRG_RCC.RCC_PCM.stPropAir1.q_iPressCt</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var DisplayScale="#x2">
-					<Name>PRG_RCC.RCC_PCM.stPropAir2.q_iPressCt</Name>
-					<Type>INT</Type>
 				</Var>
 			</Vars>
 			<Vars VarGrpType="8" ContextId="1" AreaNo="20">
