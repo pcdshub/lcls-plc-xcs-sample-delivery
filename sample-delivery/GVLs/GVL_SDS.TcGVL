@@ -130,13 +130,13 @@ PCMD : FB_PressureControlModule;
 GasMan : FB_GasManifold;
 
 {attribute 'pytmc' := 'pv: XCS:SDS:MFM:A'}
-{attribute 'TcLinkTo' := '.stMFM.i_rFlow := TIID^MAIN (EtherCAT)^Bronkhorst MFM A^TxPDO Map^fMeasure;
-                          .stMFM.q_rSetpoint := TIID^MAIN (EtherCAT)^Bronkhorst MFM A^RxPDO Map^fSetpoint;
+{attribute 'TcLinkTo' := '.stMFM.i_rFlow := 	TIIB[Bronkhorst MFM A]^TxPDO Map^fMeasure; 
+                          .stMFM.q_rSetpoint := TIIB[Bronkhorst MFM A]^RxPDO Map^fSetpoint;
 '}
 BronkhorstA : FB_BronkhorstMFM;
 
 {attribute 'pytmc' := 'pv: XCS:SDS:MFM:B'}
-{attribute 'TcLinkTo' := '.stMFM.i_rFlow 		:= TIIB[Bronkhorst MFM B]^TxPDO Map^fMeasure;
+{attribute 'TcLinkTo' := '.stMFM.i_rFlow 		:= 	TIIB[Bronkhorst MFM B]^TxPDO Map^fMeasure;
                           .stMFM.q_rSetpoint 	:=  TIIB[Bronkhorst MFM B]^RxPDO Map^fSetpoint;
 '}
 BronkhorstB : FB_BronkhorstMFM;

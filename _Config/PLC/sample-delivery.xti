@@ -53,7 +53,7 @@
 		</DataType>
 	</DataTypes>
 	<Project GUID="{E8E24F0C-C1D4-4F03-A71D-733C6242F5C4}" Name="sample-delivery" PrjFilePath="..\..\sample-delivery\sample-delivery.plcproj" TmcFilePath="..\..\sample-delivery\sample-delivery.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="sample-delivery\sample-delivery.tmc" TmcHash="{71D52355-1CA0-5A5B-9FD5-510856334BF5}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="sample-delivery\sample-delivery.tmc" TmcHash="{07393FA7-602B-17D9-1DBA-3197AC65028A}">
 			<Name>sample-delivery Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -682,6 +682,10 @@ WC bit tells you if the sync unit is OK, which tells you if cluster is alive]]><
 	</Project>
 	<Mappings>
 		<OwnerA Name="sample-delivery Instance">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Bronkhorst MFM A">
+				<Link VarA="PlcTask Inputs^GVL_SDS.BronkhorstA.stMFM.i_rFlow" VarB="TxPDO Map^fMeasure" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_SDS.BronkhorstA.stMFM.q_rSetpoint" VarB="RxPDO Map^fSetpoint" AutoLink="true"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Bronkhorst MFM B">
 				<Link VarA="PlcTask Inputs^GVL_SDS.BronkhorstB.stMFM.i_rFlow" VarB="TxPDO Map^fMeasure" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_SDS.BronkhorstB.stMFM.q_rSetpoint" VarB="RxPDO Map^fSetpoint" AutoLink="true"/>
