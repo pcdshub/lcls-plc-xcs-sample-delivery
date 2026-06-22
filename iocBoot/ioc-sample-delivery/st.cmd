@@ -4,8 +4,8 @@
 #         Project: sample-delviery.tsproj
 #        PLC name: sample-delivery (sample-delivery Instance)
 # Generated using: pytmc 2.19.1
-# Project version: 7a3c74b
-#    Project hash: 7a3c74b21ad487a3109badf5f6e5f17d04bd3739
+# Project version: 675ed4a
+#    Project hash: 675ed4a33358b1e237db8d16104c9b2249f1fedc
 #     PLC IP/host: plc-xcs-sds (Specified in Makefile; project has: 172.21.38.25)
 #      PLC Net ID: 172.21.38.25.1.1
 #  ** Production mode IOC **
@@ -15,9 +15,9 @@
 #
 #   LCLS Sample Delivery: * -> 2.0.0 (SLAC - LCLS)
 #   LCLS Vacuum: * -> 2.4.5 (SLAC - LCLS)
-#   Tc2_Standard: * (Beckhoff Automation GmbH)
-#   Tc2_System: * (Beckhoff Automation GmbH)
-#   Tc3_Module: * (Beckhoff Automation GmbH)
+#   Tc2_Standard: * -> 3.3.3.0 (Beckhoff Automation GmbH)
+#   Tc2_System: * -> 3.4.26.0 (Beckhoff Automation GmbH)
+#   Tc3_Module: * -> 3.3.21.0 (Beckhoff Automation GmbH)
 #
 ################### AUTO-GENERATED DO NOT EDIT ###################
 # Run common startup commands for linux soft IOC's
@@ -115,18 +115,18 @@ dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:sample-delive
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:sample-delivery,IDX=2,TASK_PORT=350")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:sample-delivery")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:sample-delivery,PROJECT=sample-delviery.tsproj,HASH=7a3c74b,VERSION=7a3c74b,PYTMC=2.19.1,PLC_HOST=plc-xcs-sds")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:sample-delivery,PROJECT=sample-delviery.tsproj,HASH=675ed4a,VERSION=675ed4a,PYTMC=2.19.1,PLC_HOST=plc-xcs-sds")
 
 #   LCLS Sample Delivery: * -> 2.0.0 (SLAC - LCLS)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:sample-delivery,DEPENDENCY=LCLS_Sample_Delivery,VERSION=2.0.0,VENDOR=SLAC - LCLS")
 #   LCLS Vacuum: * -> 2.4.5 (SLAC - LCLS)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:sample-delivery,DEPENDENCY=LCLS_Vacuum,VERSION=2.4.5,VENDOR=SLAC - LCLS")
-#   Tc2_Standard: * (Beckhoff Automation GmbH)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:sample-delivery,DEPENDENCY=Tc2_Standard,VERSION=*,VENDOR=Beckhoff Automation GmbH")
-#   Tc2_System: * (Beckhoff Automation GmbH)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:sample-delivery,DEPENDENCY=Tc2_System,VERSION=*,VENDOR=Beckhoff Automation GmbH")
-#   Tc3_Module: * (Beckhoff Automation GmbH)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:sample-delivery,DEPENDENCY=Tc3_Module,VERSION=*,VENDOR=Beckhoff Automation GmbH")
+#   Tc2_Standard: * -> 3.3.3.0 (Beckhoff Automation GmbH)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:sample-delivery,DEPENDENCY=Tc2_Standard,VERSION=3.3.3.0,VENDOR=Beckhoff Automation GmbH")
+#   Tc2_System: * -> 3.4.26.0 (Beckhoff Automation GmbH)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:sample-delivery,DEPENDENCY=Tc2_System,VERSION=3.4.26.0,VENDOR=Beckhoff Automation GmbH")
+#   Tc3_Module: * -> 3.3.21.0 (Beckhoff Automation GmbH)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:sample-delivery,DEPENDENCY=Tc3_Module,VERSION=3.3.21.0,VENDOR=Beckhoff Automation GmbH")
 
 cd "$(IOC_TOP)"
 
