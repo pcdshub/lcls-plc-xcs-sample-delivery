@@ -10049,6 +10049,220 @@ record(bi, "$(PREFIX)RequestedBP:Valid_RBV") {
   field(ASG, "NO_WRITE")
 }
 
+record(bi, "XCS:SDS:RCC:PCM:IO:SyncUnitOK_RBV") {
+  field(DESC, "PRG_RCC.RCC_PCM.stBaseIO.i_SyncUnitWC")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_PCM.stBaseIO.i_SyncUnitWC?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longin, "XCS:SDS:RCC:PCM:PropAir:01:HighLimit_RBV") {
+  field(DESC, "PRG_RCC.RCC_PCM.stPropAir1.iHiLimit")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_PCM.stPropAir1.iHiLimit?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longout, "XCS:SDS:RCC:PCM:PropAir:01:HighLimit") {
+  field(DESC, "PRG_RCC.RCC_PCM.stPropAir1.iHiLimit")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_PCM.stPropAir1.iHiLimit=")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(longin, "XCS:SDS:RCC:PCM:PropAir:01:LowLimit_RBV") {
+  field(DESC, "PRG_RCC.RCC_PCM.stPropAir1.iLoLimit")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_PCM.stPropAir1.iLoLimit?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longout, "XCS:SDS:RCC:PCM:PropAir:01:LowLimit") {
+  field(DESC, "PRG_RCC.RCC_PCM.stPropAir1.iLoLimit")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_PCM.stPropAir1.iLoLimit=")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(longin, "XCS:SDS:RCC:PCM:PropAir:01:Pressure_RBV") {
+  field(DESC, "PRG_RCC.RCC_PCM.stPropAir1.iPressure")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_PCM.stPropAir1.iPressure?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longin, "XCS:SDS:RCC:PCM:PropAir:01:Setpoint_RBV") {
+  field(DESC, "PRG_RCC.RCC_PCM.stPropAir1.iSetpoint")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_PCM.stPropAir1.iSetpoint?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longout, "XCS:SDS:RCC:PCM:PropAir:01:Setpoint") {
+  field(DESC, "PRG_RCC.RCC_PCM.stPropAir1.iSetpoint")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_PCM.stPropAir1.iSetpoint=")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "XCS:SDS:RCC:PCM:PropAir:01:Enable_RBV") {
+  field(DESC, "PRG_RCC.RCC_PCM.stPropAir1.xEnable")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_PCM.stPropAir1.xEnable?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "XCS:SDS:RCC:PCM:PropAir:01:Enable") {
+  field(DESC, "PRG_RCC.RCC_PCM.stPropAir1.xEnable")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_PCM.stPropAir1.xEnable=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(longin, "XCS:SDS:RCC:PCM:PropAir:02:HighLimit_RBV") {
+  field(DESC, "PRG_RCC.RCC_PCM.stPropAir2.iHiLimit")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_PCM.stPropAir2.iHiLimit?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longout, "XCS:SDS:RCC:PCM:PropAir:02:HighLimit") {
+  field(DESC, "PRG_RCC.RCC_PCM.stPropAir2.iHiLimit")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_PCM.stPropAir2.iHiLimit=")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(longin, "XCS:SDS:RCC:PCM:PropAir:02:LowLimit_RBV") {
+  field(DESC, "PRG_RCC.RCC_PCM.stPropAir2.iLoLimit")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_PCM.stPropAir2.iLoLimit?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longout, "XCS:SDS:RCC:PCM:PropAir:02:LowLimit") {
+  field(DESC, "PRG_RCC.RCC_PCM.stPropAir2.iLoLimit")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_PCM.stPropAir2.iLoLimit=")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(longin, "XCS:SDS:RCC:PCM:PropAir:02:Pressure_RBV") {
+  field(DESC, "PRG_RCC.RCC_PCM.stPropAir2.iPressure")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_PCM.stPropAir2.iPressure?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longin, "XCS:SDS:RCC:PCM:PropAir:02:Setpoint_RBV") {
+  field(DESC, "PRG_RCC.RCC_PCM.stPropAir2.iSetpoint")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_PCM.stPropAir2.iSetpoint?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longout, "XCS:SDS:RCC:PCM:PropAir:02:Setpoint") {
+  field(DESC, "PRG_RCC.RCC_PCM.stPropAir2.iSetpoint")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_PCM.stPropAir2.iSetpoint=")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "XCS:SDS:RCC:PCM:PropAir:02:Enable_RBV") {
+  field(DESC, "PRG_RCC.RCC_PCM.stPropAir2.xEnable")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_PCM.stPropAir2.xEnable?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "XCS:SDS:RCC:PCM:PropAir:02:Enable") {
+  field(DESC, "PRG_RCC.RCC_PCM.stPropAir2.xEnable")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_PCM.stPropAir2.xEnable=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
 record(ai, "XCS:RCC:02:ILK_Setpoint_RBV") {
   # PRG_RCC.stRCC_CTL_HPLC.RCC_GCP_01_INTERLOCK_SETPOINT
   field(DESC, "PRG_RCC.stRCC_CTL_HP...NTERLOCK_SETPOINT")

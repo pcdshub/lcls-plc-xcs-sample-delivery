@@ -186,6 +186,9 @@
 		<Box File="RCC (EP2338-0001).xti" Id="66">
 			<EtherCAT PortABoxInfo="#x01000024"/>
 		</Box>
+		<Box File="RCC_PCM_A (EP4374-0002).xti" Id="67">
+			<EtherCAT PortABoxInfo="#x01000042"/>
+		</Box>
 		<EtherCAT>
 			<SyncUnit Name="[ALI (EP1111)]" HcName="ALI (EP1111)"/>
 			<SyncUnit Name="[Bronkhorst MFM A]" HcName="Bronkhorst MFM A"/>
