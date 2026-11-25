@@ -14,12 +14,22 @@ VAR
 
     RCC_GCP_01_dummy : ST_VG;
     xSystemOverrideMode_RCC : BOOL := FALSE;
+
+    {attribute 'pytmc' := 'pv: XCS:SDS:RCC:PCM'}
+    {attribute 'TcLinkTo' := '.stPropAir1.i_iPressRB 	:= TIIB[RCC_PCM_A (EP4374-0002)]^AI Inputs Channel 1^Value;
+                          .stPropAir2.i_iPressRB 		:= TIIB[RCC_PCM_A (EP4374-0002)]^AI Inputs Channel 2^Value;
+                          .stPropAir1.q_iPressCt 		:= TIIB[RCC_PCM_A (EP4374-0002)]^AO Outputs Channel 3^Analog output;
+                          .stPropAir2.q_iPressCt 		:= TIIB[RCC_PCM_A (EP4374-0002)]^AO Outputs Channel 4^Analog output;
+    '}
+    RCC_PCM : FB_MPV1;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[// dummy gauge is used to allow for RCC withough gauge interlock
 RCC_GCP_01_dummy.xPRESS_OK := TRUE;
 stRCC_CTL_HPLC.RCC_VRC_03_OPEN_OK := TRUE;
+
+RCC_PCM();
 
 fbRCC_SIM( stRCC_VRC_01:= RCC_VRC_01.iq_stValve,
     stRCC_VRC_02 := RCC_VRC_02.iq_stValve,

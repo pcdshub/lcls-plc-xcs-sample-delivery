@@ -2,7 +2,7 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <GVL Name="GVL_SDS" Id="{233c10f9-ad08-42e0-b3b0-42b6b4ca796a}">
     <Declaration><![CDATA[VAR_GLOBAL
-	
+
 // TODO: FIX Linking for Devices will be deployed
 //  Working: Bronkhorst MFM B
 {attribute 'pytmc' := 'pv: XCS:SDS:SEL:A'}
@@ -15,7 +15,7 @@
                           .stShaker03.q_xPwrDO := TIIB[M3 Selector A Digital IO (EP2338-1001)]^Channel 11^Output;
                           .stShaker04.q_xPwrDO := TIIB[M3 Selector A Digital IO (EP2338-1001)]^Channel 12^Output;
                           .stBaseIO.i_SyncUnitWC := TIID^MAIN (EtherCAT)^M3 Selector A (EP1111)^WcState^WcState;
-						  .
+                          .
 '}
 M3SelectorA : FB_SelectorM3;
 
@@ -59,107 +59,15 @@ M3SelectorC : FB_SelectorM3;
 M3SelectorD : FB_SelectorM3;
 
 {attribute 'pytmc' := 'pv: XCS:SDS:PCM:A'}
-{attribute 'TcLinkTo' := '.stPropAir1.i_iPressRB 		:= TIIB[PCM A (EP4374-0002)]^AI Inputs Channel 1^Value;
-                          .stPropAir2.i_iPressRB 		:= TIIB[PCM A (EP4374-0002)]^AI Inputs Channel 2^Value;
-                          .stPropAir1.q_iPressCt 		:= TIIB[PCM A (EP4374-0002)]^AO Outputs Channel 3^Analog output;
-                          .stPropAir2.q_iPressCt 		:= TIIB[PCM A (EP4374-0002)]^AO Outputs Channel 4^Analog output;
-                          .stSerial1.stComIn.Status 	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Status;
-                          .stSerial2.stComIn.Status 	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Status;
-                          .stSerial1.stComOut.Ctrl 		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Ctrl;
-                          .stSerial2.stComOut.Ctrl 		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Ctrl;
-                          .stBaseIO.i_SyncUnitWC 		:= TIIB[PCM A (EP1111)]^WcState^WcState;
-						  
-						  .stSerial1.stComIn.D[0]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 0;
-						  .stSerial1.stComIn.D[1]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 1;
-						  .stSerial1.stComIn.D[2]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 2;
-						  .stSerial1.stComIn.D[3]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 3;
-						  .stSerial1.stComIn.D[4]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 4;
-						  .stSerial1.stComIn.D[5]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 5;
-						  .stSerial1.stComIn.D[6]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 6;
-						  .stSerial1.stComIn.D[7]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 7;
-						  .stSerial1.stComIn.D[8]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 8;
-						  .stSerial1.stComIn.D[9]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 9;
-						  .stSerial1.stComIn.D[10]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 10;
-						  .stSerial1.stComIn.D[11]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 11;
-						  .stSerial1.stComIn.D[12]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 12;
-						  .stSerial1.stComIn.D[13]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 13;
-						  .stSerial1.stComIn.D[14]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 14;
-						  .stSerial1.stComIn.D[15]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 15;
-						  .stSerial1.stComIn.D[16]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 16;
-						  .stSerial1.stComIn.D[17]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 17;
-						  .stSerial1.stComIn.D[18]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 18;
-						  .stSerial1.stComIn.D[19]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 19;
-						  .stSerial1.stComIn.D[20]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 20;
-						  .stSerial1.stComIn.D[21]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 21;
-						  
-						  .stSerial2.stComIn.D[0]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 0;
-						  .stSerial2.stComIn.D[1]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 1;
-						  .stSerial2.stComIn.D[2]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 2;
-						  .stSerial2.stComIn.D[3]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 3;
-						  .stSerial2.stComIn.D[4]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 4;
-						  .stSerial2.stComIn.D[5]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 5;
-						  .stSerial2.stComIn.D[6]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 6;
-						  .stSerial2.stComIn.D[7]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 7;
-						  .stSerial2.stComIn.D[8]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 8;
-						  .stSerial2.stComIn.D[9]  		:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 9;
-						  .stSerial2.stComIn.D[10]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 10;
-						  .stSerial2.stComIn.D[11]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 11;
-						  .stSerial2.stComIn.D[12]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 12;
-						  .stSerial2.stComIn.D[13]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 13;
-						  .stSerial2.stComIn.D[14]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 14;
-						  .stSerial2.stComIn.D[15]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 15;
-						  .stSerial2.stComIn.D[16]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 16;
-						  .stSerial2.stComIn.D[17]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 17;
-						  .stSerial2.stComIn.D[18]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 18;
-						  .stSerial2.stComIn.D[19]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 19;
-						  .stSerial2.stComIn.D[20]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 20;
-						  .stSerial2.stComIn.D[21]  	:= TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Data In 21;
-						  
-						  .stSerial1.stComOut.D[0]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 0;
-						  .stSerial1.stComOut.D[1]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 1;
-						  .stSerial1.stComOut.D[2]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 2;
-						  .stSerial1.stComOut.D[3]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 3;
-						  .stSerial1.stComOut.D[4]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 4;
-						  .stSerial1.stComOut.D[5]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 5;
-						  .stSerial1.stComOut.D[6]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 6;
-						  .stSerial1.stComOut.D[7]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 7;
-						  .stSerial1.stComOut.D[8]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 8;
-						  .stSerial1.stComOut.D[9]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 9;
-						  .stSerial1.stComOut.D[10]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 10;
-						  .stSerial1.stComOut.D[11]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 11;
-						  .stSerial1.stComOut.D[12]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 12;
-						  .stSerial1.stComOut.D[13]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 13;
-						  .stSerial1.stComOut.D[14]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 14;
-						  .stSerial1.stComOut.D[15]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 15;
-						  .stSerial1.stComOut.D[16]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 16;
-						  .stSerial1.stComOut.D[17]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 17;
-						  .stSerial1.stComOut.D[18]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 18;
-						  .stSerial1.stComOut.D[19]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 19;
-						  .stSerial1.stComOut.D[20]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
-						  .stSerial1.stComOut.D[21]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 21;
-						  
-						  .stSerial2.stComOut.D[0]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 0;
-						  .stSerial2.stComOut.D[1]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 1;
-						  .stSerial2.stComOut.D[2]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 2;
-						  .stSerial2.stComOut.D[3]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 3;
-						  .stSerial2.stComOut.D[4]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 4;
-						  .stSerial2.stComOut.D[5]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 5;
-						  .stSerial2.stComOut.D[6]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 6;
-						  .stSerial2.stComOut.D[7]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 7;
-						  .stSerial2.stComOut.D[8]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 8;
-						  .stSerial2.stComOut.D[9]  		:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 9;
-						  .stSerial2.stComOut.D[10] 	 	:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 10;
-						  .stSerial2.stComOut.D[11] 	 	:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 11;
-						  .stSerial2.stComOut.D[12] 	 	:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 12;
-						  .stSerial2.stComOut.D[13] 	 	:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 13;
-						  .stSerial2.stComOut.D[14] 	 	:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 14;
-						  .stSerial2.stComOut.D[15] 	 	:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 15;
-						  .stSerial2.stComOut.D[16] 	 	:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 16;
-						  .stSerial2.stComOut.D[17] 	 	:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 17;
-						  .stSerial2.stComOut.D[18] 	 	:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 18;
-						  .stSerial2.stComOut.D[19] 	 	:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 19;
-						  .stSerial2.stComOut.D[20] 	 	:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 20;
-						  .stSerial2.stComOut.D[21] 	 	:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Data Out 21;
+{attribute 'TcLinkTo' := '.stPropAir1.i_iPressRB 	:= TIIB[PCM A (EP4374-0002)]^AI Inputs Channel 1^Value;
+                          .stPropAir2.i_iPressRB 	:= TIIB[PCM A (EP4374-0002)]^AI Inputs Channel 2^Value;
+                          .stPropAir1.q_iPressCt 	:= TIIB[PCM A (EP4374-0002)]^AO Outputs Channel 3^Analog output;
+                          .stPropAir2.q_iPressCt 	:= TIIB[PCM A (EP4374-0002)]^AO Outputs Channel 4^Analog output;
+                          .stSerial1.stComIn.Status := TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Status;
+                          .stSerial2.stComIn.Status := TIIB[PCM A (EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Status;
+                          .stSerial1.stComOut.Ctrl 	:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Ctrl;
+                          .stSerial2.stComOut.Ctrl 	:= TIIB[PCM A (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Ctrl;
+                          .stBaseIO.i_SyncUnitWC 	:= TIIB[PCM A (EP1111)]^WcState^WcState;
 '}
 PCMA : FB_PressureControlModule;
 
@@ -186,7 +94,7 @@ PCMB : FB_PressureControlModule;
                           .stSerial1.stComOut.Ctrl 	:= TIIB[PCM C (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Ctrl;
                           .stSerial2.stComOut.Ctrl 	:= TIIB[PCM C (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Ctrl;
                           .stBaseIO.i_SyncUnitWC 	:= TIIB[PCM C (EP1111)]^WcState^WcState;
-						  '}
+                          '}
 PCMC : FB_PressureControlModule;
 
 {attribute 'pytmc' := 'pv: XCS:SDS:PCM:D'}
@@ -199,7 +107,7 @@ PCMC : FB_PressureControlModule;
                           .stSerial1.stComOut.Ctrl 	:= TIIB[PCM D (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Ctrl;
                           .stSerial2.stComOut.Ctrl 	:= TIIB[PCM D (EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Ctrl;
                           .stBaseIO.i_SyncUnitWC 	:= TIIB[PCM D (EP1111)]^WcState^WcState;
-						  '}
+                          '}
 PCMD : FB_PressureControlModule;
 
 {attribute 'pytmc' := 'pv: XCS:SDS:MAN'}
@@ -222,13 +130,13 @@ PCMD : FB_PressureControlModule;
 GasMan : FB_GasManifold;
 
 {attribute 'pytmc' := 'pv: XCS:SDS:MFM:A'}
-{attribute 'TcLinkTo' := '.stMFM.i_rFlow := TIID^MAIN (EtherCAT)^Bronkhorst MFM A^TxPDO Map^fMeasure;
-                          .stMFM.q_rSetpoint := TIID^MAIN (EtherCAT)^Bronkhorst MFM A^RxPDO Map^fSetpoint;
+{attribute 'TcLinkTo' := '.stMFM.i_rFlow := 	TIIB[Bronkhorst MFM A]^TxPDO Map^fMeasure;
+                          .stMFM.q_rSetpoint := TIIB[Bronkhorst MFM A]^RxPDO Map^fSetpoint;
 '}
 BronkhorstA : FB_BronkhorstMFM;
 
 {attribute 'pytmc' := 'pv: XCS:SDS:MFM:B'}
-{attribute 'TcLinkTo' := '.stMFM.i_rFlow 		:= TIIB[Bronkhorst MFM B]^TxPDO Map^fMeasure;
+{attribute 'TcLinkTo' := '.stMFM.i_rFlow 		:= 	TIIB[Bronkhorst MFM B]^TxPDO Map^fMeasure;
                           .stMFM.q_rSetpoint 	:=  TIIB[Bronkhorst MFM B]^RxPDO Map^fSetpoint;
 '}
 BronkhorstB : FB_BronkhorstMFM;
